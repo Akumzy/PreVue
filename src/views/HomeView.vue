@@ -1,32 +1,20 @@
 <template>
-  <div>
-    <div class="columns is-mobile">
-      <div id="empty-left" class="column"></div>
-      <div id="project-tabs-container" class="column">
-        <ProjectTabs />
+  <div class="studio">
+    <aside class="studio-left-bar">
+      <div>
+        <p class="panel-heading">Routes</p>
+        <RouteDisplay/>
       </div>
-    </div>
-    <div id="empty-right" class="column"></div>
-    <div class="columns is-mobile" id="home-section">
-      <aside id="left-side-container" class="column aside hero">
-        <div id="route-display-container" class="column is-fullheight">
-          <p class="panel-heading">Routes</p>
-          <RouteDisplay />
-        </div>
-
-        <div id="create-component-container" class="column is-fullheight">
-          <HomeSidebar />
-        </div>
-      </aside>
-
-      <div id="center-container" class="column hero is-fullheight">
-        <ComponentDisplay />
+      <div>
+        <HomeSidebar/>
       </div>
-
-      <div id="right-side-container" class="column aside hero is-fullheight">
-        <HomeQueue />
-      </div>
-    </div>
+    </aside>
+    <maint class="studio-main">
+      <ComponentDisplay/>
+    </maint>
+    <aside class="studio-right-bar">
+      <HomeQueue/>
+    </aside>
   </div>
 </template>
 
@@ -49,25 +37,20 @@ export default {
 };
 </script>
 
-<style scoped>
-#route-display-container {
-  background-color: #393f4d;
+<style lang="scss" scoped>
+$sidebar-height: 220px;
+.studio {
+  width: 100%;
   height: 100%;
-  padding: 0;
-}
-
-#create-component-container {
-  border: 1px solid #d1bfa7;
-  height: 100%;
-  background-color: #d4d4dc;
-}
-
-#left-side-container,
-#empty-left {
-  max-width: 250px;
-}
-#right-side-container,
-#empty-right {
-  max-width: 150px;
+  display: grid;
+  grid-template-columns: $sidebar-height auto $sidebar-height;
+  grid-template-rows: 100%;
+  &-left-bar {
+  }
+  &-main {
+    background-color: #ddd;
+  }
+  &-right-bar {
+  }
 }
 </style>

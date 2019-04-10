@@ -3,7 +3,7 @@
   "author": {
     "name": "teamprevue",
     "email": "teamprevue@gmail.com",
-    "url": "www.prevue.io"
+    "url": "https://www.prevue.io"
   },
   "version": "1.0.0",
   "description": "Developer prototyping app built with Vue on Electron",
