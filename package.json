@@ -43,7 +43,7 @@
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^10.0.1",
     "babel-jest": "^23.6.0",
-    "electron": "^3.0.0",
+    "electron": "^42.11.16",
     "electron-builder-squirrel-windows": "^20.39.0",
     "electron-compile": "^6.4.4",
     "electron-compilers": "^5.9.0",
